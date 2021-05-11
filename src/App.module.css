@@ -1,0 +1,12 @@
+.appConteiner {
+  text-align: center;
+  border: solid 1px #003c86;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 800px;
+}
+.text {
+  color: #003c86;
+}

@@ -1,0 +1,20 @@
+.labelName {
+  margin-right: 20px;
+}
+
+.inputName {
+  margin-left: 20px;
+}
+
+.buttonAddContact {
+  border-radius: 4px;
+  padding: auto;
+
+  min-width: 100px;
+  height: 40px;
+  text-align: center;
+  border: 1px transparent;
+  color: #fff;
+  background-color: #003c86;
+  border: #003c86;
+}
