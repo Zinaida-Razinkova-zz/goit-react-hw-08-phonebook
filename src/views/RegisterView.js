@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { authOperations } from "../redux/auth";
+import styles from "../App.module.css";
 
 class RegisterView extends Component {
   state = {
@@ -26,11 +27,15 @@ class RegisterView extends Component {
 
     return (
       <div>
-        <h1>Страница регистрации</h1>
+        <h1>Create your account</h1>
 
-        <form onSubmit={this.handleSubmit} autoComplete="off">
+        <form
+          className={styles.formLoginCreate}
+          onSubmit={this.handleSubmit}
+          autoComplete="off"
+        >
           <label>
-            Имя
+            Name
             <input
               type="text"
               name="name"
@@ -40,7 +45,7 @@ class RegisterView extends Component {
           </label>
 
           <label>
-            Почта
+            Email
             <input
               type="email"
               name="email"
@@ -50,7 +55,7 @@ class RegisterView extends Component {
           </label>
 
           <label>
-            Пароль
+            Password
             <input
               type="password"
               name="password"
@@ -59,7 +64,9 @@ class RegisterView extends Component {
             />
           </label>
 
-          <button type="submit">Зарегистрироваться</button>
+          <button className={styles.buttonLoginCreate} type="submit">
+            Create account
+          </button>
         </form>
       </div>
     );

@@ -1,6 +1,6 @@
 .appConteiner {
   text-align: center;
-  border: solid 1px #003c86;
+  border: solid 1px #043e52;
   margin-right: auto;
   margin-left: auto;
   margin-top: 50px;
@@ -8,5 +8,37 @@
   width: 800px;
 }
 .text {
-  color: #003c86;
+  color: #043e52;
+}
+
+.texthome {
+  color: #043e52;
+  margin-left: 25px;
+}
+
+.img {
+  margin-left: 12px;
+}
+
+.buttonLoginCreate {
+  border-radius: 4px;
+  padding: auto;
+  margin-left: 20px;
+  min-width: 100px;
+  height: 40px;
+  text-align: center;
+  border: 1px transparent;
+  color: #fff;
+  background-color: #043e52;
+  border: #043e52;
+}
+
+.formLoginCreate {
+  text-align: center;
+  border: solid 1px #043e52;
+
+  width: 100%;
+  margin: 0 auto 15px;
+  padding: 15px;
+  border-radius: 4px;
 }

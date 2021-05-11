@@ -1,23 +1,24 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { authOperations } from '../redux/auth';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { authOperations } from "../redux/auth";
+import styles from "../App.module.css";
 
 class LoginView extends Component {
   state = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   };
 
   handleChange = ({ target: { name, value } }) => {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
 
     this.props.onLogin(this.state);
 
-    this.setState({ name: '', email: '', password: '' });
+    this.setState({ name: "", email: "", password: "" });
   };
 
   render() {
@@ -25,15 +26,11 @@ class LoginView extends Component {
 
     return (
       <div>
-        <h1>Страница логина</h1>
+        <h1>Log in to Phonebook</h1>
 
-        <form
-          onSubmit={this.handleSubmit}
-
-          autoComplete="off"
-        >
+        <form onSubmit={this.handleSubmit} autoComplete="off">
           <label>
-            Почта
+            Email
             <input
               type="email"
               name="email"
@@ -43,7 +40,7 @@ class LoginView extends Component {
           </label>
 
           <label>
-            Пароль
+            Password
             <input
               type="password"
               name="password"
@@ -52,7 +49,9 @@ class LoginView extends Component {
             />
           </label>
 
-          <button type="submit">Войти</button>
+          <button className={styles.buttonLoginCreate} type="submit">
+            Log in
+          </button>
         </form>
       </div>
     );
