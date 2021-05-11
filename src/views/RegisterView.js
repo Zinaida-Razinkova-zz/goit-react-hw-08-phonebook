@@ -1,25 +1,24 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { authOperations } from '../redux/auth';
-
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { authOperations } from "../redux/auth";
 
 class RegisterView extends Component {
   state = {
-    name: '',
-    email: '',
-    password: '',
+    name: "",
+    email: "",
+    password: "",
   };
 
   handleChange = ({ target: { name, value } }) => {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
 
     this.props.onRegister(this.state);
 
-    this.setState({ name: '', email: '', password: '' });
+    this.setState({ name: "", email: "", password: "" });
   };
 
   render() {
@@ -29,11 +28,7 @@ class RegisterView extends Component {
       <div>
         <h1>Страница регистрации</h1>
 
-        <form
-          onSubmit={this.handleSubmit}
-
-          autoComplete="off"
-        >
+        <form onSubmit={this.handleSubmit} autoComplete="off">
           <label>
             Имя
             <input
@@ -44,7 +39,7 @@ class RegisterView extends Component {
             />
           </label>
 
-          <label style={styles.label}>
+          <label>
             Почта
             <input
               type="email"
@@ -54,7 +49,7 @@ class RegisterView extends Component {
             />
           </label>
 
-          <label style={styles.label}>
+          <label>
             Пароль
             <input
               type="password"

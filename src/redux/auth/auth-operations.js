@@ -1,17 +1,16 @@
-import axios from 'axios';
-import authActions from './auth-actions';
+import axios from "axios";
+import authActions from "./auth-actions";
 
 // axios.defaults.baseURL = 'https://lpj-tasker.herokuapp.com';
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+axios.defaults.baseURL = "https://connections-api.herokuapp.com";
 // url бэкендa
-
 
 const token = {
   set(token) {
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
   },
   unset() {
-    axios.defaults.headers.common.Authorization = '';
+    axios.defaults.headers.common.Authorization = "";
   },
 };
 
@@ -21,11 +20,11 @@ const token = {
  *
  * После успешной регистрации добавляем токен в HTTP-заголовок
  */
-const register = credentials => async dispatch => {
+const register = (credentials) => async (dispatch) => {
   dispatch(authActions.registerRequest());
 
   try {
-    const response = await axios.post('/users/signup', credentials);
+    const response = await axios.post("/users/signup", credentials);
 
     token.set(response.data.token);
     dispatch(authActions.registerSuccess(response.data));
@@ -41,11 +40,11 @@ const register = credentials => async dispatch => {
  *
  * После успешного логина добавляем токен в HTTP-заголовок
  */
-const logIn = credentials => async dispatch => {
+const logIn = (credentials) => async (dispatch) => {
   dispatch(authActions.loginRequest());
 
   try {
-    const response = await axios.post('/users/login', credentials);
+    const response = await axios.post("/users/login", credentials);
 
     token.set(response.data.token);
     dispatch(authActions.loginSuccess(response.data));
@@ -61,11 +60,11 @@ const logIn = credentials => async dispatch => {
  *
  * 1. После успешного логаута, удаляем токен из HTTP-заголовка
  */
-const logOut = () => async dispatch => {
+const logOut = () => async (dispatch) => {
   dispatch(authActions.logoutRequest());
 
   try {
-    await axios.post('/users/logout');
+    await axios.post("/users/logout");
 
     // token.unset();
     dispatch(authActions.logoutSuccess());
@@ -96,7 +95,7 @@ const getCurrentUser = () => async (dispatch, getState) => {
   dispatch(authActions.getCurrentUserRequest());
 
   try {
-    const response = await axios.get('/users/current');
+    const response = await axios.get("/users/current");
 
     dispatch(authActions.getCurrentUserSuccess(response.data));
   } catch (error) {
@@ -104,4 +103,5 @@ const getCurrentUser = () => async (dispatch, getState) => {
   }
 };
 
+// eslint-disable-next-line
 export default { register, logOut, logIn, getCurrentUser };
