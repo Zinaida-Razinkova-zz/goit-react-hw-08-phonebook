@@ -1,10 +1,13 @@
-.header {
-  /* background: linear-gradient(to top, #043e52, #5bb4b0); */
+.AppBarHeader {
+  width: 100%;
+  background: linear-gradient(to right, #043e52, #5bb4b0);
   border-bottom: 1px solid #ececec;
-  background-color: #1c939b;
+  /* background-color: #1c939b; */
   min-height: 74px;
   display: flex;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navlink {
@@ -12,12 +15,14 @@
   color: #ffffff;
   text-decoration: none;
   margin-left: 25px;
+  margin-right: 25px;
 }
 
 .buttonLogOut {
   border-radius: 4px;
   padding: auto;
   margin-left: 20px;
+  margin-right: 20px;
   min-width: 100px;
   height: 40px;
   text-align: center;
@@ -25,12 +30,17 @@
   color: #fff;
   background-color: #043e52;
   border: #043e52;
+
+  box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
+  cursor: pointer;
 }
 
 .imgUser {
   margin-right: 15px;
 }
 
-.userMenuBlock {
-  margin-left: 850px;
+.welcomeText {
+  font-size: 18px;
+  color: #ffffff;
+  margin-right: 25px;
 }

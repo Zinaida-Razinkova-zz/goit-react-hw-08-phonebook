@@ -1,11 +1,17 @@
 .appConteiner {
   text-align: center;
-  border: solid 1px #043e52;
+  /* border: solid 1px #043e52; */
   margin-right: auto;
   margin-left: auto;
   margin-top: 50px;
   margin-bottom: 50px;
   width: 800px;
+  /* width: 350px; */
+  /* margin: 0 auto 15px;
+  padding: 15px; */
+
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
 }
 .text {
   color: #043e52;
@@ -13,32 +19,59 @@
 
 .texthome {
   color: #043e52;
-  margin-left: 25px;
 }
 
-.img {
-  margin-left: 12px;
-}
-
-.buttonLoginCreate {
-  border-radius: 4px;
-  padding: auto;
-  margin-left: 20px;
-  min-width: 100px;
+.buttonLoginForm,
+.buttonCreateAccount {
+  min-width: 150px;
   height: 40px;
-  text-align: center;
+
+  border-radius: 4px;
   border: 1px transparent;
   color: #fff;
   background-color: #043e52;
   border: #043e52;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
+  cursor: pointer;
 }
 
-.formLoginCreate {
-  text-align: center;
-  border: solid 1px #043e52;
-
-  width: 100%;
+.loginForm,
+.createForm {
+  width: 350px;
   margin: 0 auto 15px;
   padding: 15px;
+
+  border: 1px solid #d4d4d4;
   border-radius: 4px;
+}
+
+.LoginFormLabel,
+.createFormLabel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  color: #333232;
+}
+.LoginFormText,
+.createFormText {
+  margin-bottom: 10px;
+}
+
+.buttonLoginBlock,
+.buttonCreateAccount {
+  text-align: center;
+}
+
+.loginFormPhonebook,
+.createFormAccount {
+  text-align: center;
+}
+
+.loginFormHeading,
+.createFormHeading {
+  color: #043e52;
+}
+
+.homeBlock {
+  text-align: center;
 }

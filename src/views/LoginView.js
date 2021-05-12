@@ -26,11 +26,16 @@ class LoginView extends Component {
 
     return (
       <div>
-        <h1>Log in to Phonebook</h1>
-
-        <form onSubmit={this.handleSubmit} autoComplete="off">
-          <label>
-            Email
+        <div className={styles.loginFormPhonebook}>
+          <h1 className={styles.loginFormHeading}>Log in to Phonebook</h1>
+        </div>
+        <form
+          className={styles.loginForm}
+          onSubmit={this.handleSubmit}
+          autoComplete="off"
+        >
+          <label className={styles.LoginFormLabel}>
+            <span className={styles.LoginFormText}>Email</span>
             <input
               type="email"
               name="email"
@@ -39,8 +44,8 @@ class LoginView extends Component {
             />
           </label>
 
-          <label>
-            Password
+          <label className={styles.LoginFormLabel}>
+            <span className={styles.LoginFormText}>Password</span>
             <input
               type="password"
               name="password"
@@ -48,10 +53,11 @@ class LoginView extends Component {
               onChange={this.handleChange}
             />
           </label>
-
-          <button className={styles.buttonLoginCreate} type="submit">
-            Log in
-          </button>
+          <div className={styles.buttonLoginBlock}>
+            <button className={styles.buttonLoginForm} type="submit">
+              Log in
+            </button>
+          </div>
         </form>
       </div>
     );

@@ -27,15 +27,16 @@ class RegisterView extends Component {
 
     return (
       <div>
-        <h1>Create your account</h1>
-
+        <div className={styles.createFormAccount}>
+          <h1 className={styles.createFormHeading}>Create your account</h1>
+        </div>
         <form
-          className={styles.formLoginCreate}
+          className={styles.createForm}
           onSubmit={this.handleSubmit}
           autoComplete="off"
         >
-          <label>
-            Name
+          <label className={styles.createFormLabel}>
+            <span className={styles.createFormText}>Name</span>
             <input
               type="text"
               name="name"
@@ -44,8 +45,8 @@ class RegisterView extends Component {
             />
           </label>
 
-          <label>
-            Email
+          <label className={styles.createFormLabel}>
+            <span className={styles.createFormText}>Email</span>
             <input
               type="email"
               name="email"
@@ -54,8 +55,8 @@ class RegisterView extends Component {
             />
           </label>
 
-          <label>
-            Password
+          <label className={styles.createFormLabel}>
+            <span className={styles.createFormText}>Password</span>
             <input
               type="password"
               name="password"
@@ -63,10 +64,11 @@ class RegisterView extends Component {
               onChange={this.handleChange}
             />
           </label>
-
-          <button className={styles.buttonLoginCreate} type="submit">
-            Create account
-          </button>
+          <div className={styles.buttonCreateBlock}>
+            <button className={styles.buttonCreateAccount} type="submit">
+              Create account
+            </button>
+          </div>
         </form>
       </div>
     );
