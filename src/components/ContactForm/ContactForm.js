@@ -36,7 +36,7 @@ class ContactForm extends Component {
       <>
         <form className={styles.formConteiner} onSubmit={this.handlSubmit}>
           <label className={styles.labelName} htmlFor="">
-            Name
+            <span className={styles.spanText}>Name</span>
             <input
               className={styles.inputName}
               onChange={this.handlChange}
@@ -49,7 +49,7 @@ class ContactForm extends Component {
             />
           </label>
           <label className={styles.labelName} htmlFor="">
-            Number
+            <span className={styles.spanText}>Number</span>
             <input
               className={styles.inputName}
               onChange={this.handlChange}

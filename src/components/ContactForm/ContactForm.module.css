@@ -1,9 +1,12 @@
-.labelName {
-  margin-right: 20px;
-}
-
+.labelName,
 .inputName {
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  color: #333232;
+}
+.spanText {
+  margin-bottom: 10px;
 }
 
 .buttonAddContact {
